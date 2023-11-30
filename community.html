@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./styles/community.css" />
+    <script src="./script/community.js" defer></script>
+    <script src="./script/header.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="header-logo-container">
+          <img src="./assets/logo.svg" alt="logo" class="header-img" />
+          <div>
+            <p id="title" class="text-b text-white">AmourBake</p>
+            <p id="sub-title" class="text-lh text-white">Course Bakery</p>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="header-contact-container">
+            <img src="./assets/qr.png" alt="Instagram QR" class="header-img" />
+            <div>
+              <div class="contact-number">
+                <img src="./assets/line.png" alt="line icon" />
+                <p class="text-lh text-cream">@amourbake</p>
+              </div>
+              <div class="contact-number">
+                <img src="./assets/phone.png" alt="phone icon" />
+                <p class="text-lh text-cream">+628233367777</p>
+              </div>
+            </div>
+          </div>
+          <div class="header-btn-container">
+            <a href="./login.html" class="text-lh header-btn">Sign In</a>
+            <a href="./register.html" class="text-lh header-btn">Sign Up</a>
+          </div>
+          <a href="./profile.html" class="user-container">
+            <p class="text-b text-cream">Jennifer Shakila</p>
+            <img src="./assets/avatar.png" alt="avatar" class="header-img" />
+          </a>
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <input type="checkbox" id="check" />
+        <div class="menu">
+          <div class="nav">
+            <a href="login.html" class="notLoggedIn">Login</a>
+            <a href="register.html" class="notLoggedIn">Register</a>
+            <a href="profile.html" id="LoggedIn">Profile</a>
+            <a href="about.html">About Us</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="course.html">Course</a>
+            <a href="community.html">Community</a>
+          </div>
+          <label for="check" class="close-menu"
+            ><i class="fas fa-times"></i
+          ></label>
+        </div>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </div>
+      <div class="header-navigation text-brown">
+        <a href="./index.html" class="nav-item">Home</a>
+        <a href="./about.html" class="nav-item">About Us</a>
+        <a href="./tutorial.html" class="nav-item">Tutorial</a>
+        <a href="./course.html" class="nav-item">Course</a>
+        <a href="./community.html" class="nav-item text-b">Community</a>
+      </div>
+    </header>
+    <main class="main-container community-gap">
+      <div class="filter-container">
+        <h1>AMOURBAKE</h1>
+        <div class="custom-select">
+          <select name="filter" id="communityFilter">
+            <option value="forum">Forum</option>
+            <option value="galery">Galery</option>
+          </select>
+        </div>
+      </div>
+      <section id="galerySection">
+        <div id="imageGridSection">
+          <!-- Image Automatically Generated -->
+        </div>
+        <button class="image-btn">Lihat Semua</button>
+      </section>
+      <section id="forumSection">
+        <div class="search-bar">
+          <i class="fa fa-search search-icon" for="search"></i>
+          <input type="text" name="search" class="search-field" />
+        </div>
+        <div class="community-card-container" id="communityCardContainer">
+          <!-- Card Automatically Generated -->
+        </div>
+        <h1>#HotTopics</h1>
+        <div class="topics-container">
+          <div class="topic-container">
+            <div class="topic-header">
+              <img src="./assets/community-1.png" alt="Community Photo" />
+              <h3>SOFTCAKE COMMUNITY / Thisha</h3>
+            </div>
+            <div class="topic-body">
+              <div class="topic-content">
+                <p class="text-sb">
+                  Guys! Mau tanya nih, kok cheese softcake aku masih lengket ke
+                  loyang setelah dibake ya? Padahal aku udah pake mentega loh di
+                  dinding loyangnya. Bantu up dongg, makasiihhh
+                </p>
+                <div class="topic-asset">
+                  <img src="./assets/topic.jpg" alt="Topic Photo" />
+                  <div class="action-container">
+                    <div class="topic-action">
+                      <img src="./assets/like-icon.png" alt="Like" />
+                      <p>Like</p>
+                    </div>
+                    <div class="topic-action">
+                      <img src="./assets/comment-icon.png" alt="Comment" />
+                      <p>Comment</p>
+                    </div>
+                    <div class="topic-action">
+                      <img src="./assets/share-iconn.png" alt="Share" />
+                      <p>Share</p>
+                    </div>
+                    <div class="topic-action">
+                      <img src="./assets/report-icon.png" alt="Report" />
+                      <p>Report</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="topic-input">
+                <img src="./assets/arrow-up.png" alt="Arrow Up" />
+                <input
+                  type="text"
+                  class="comment-input"
+                  placeholder="Berikan Komentar Anda"
+                />
+                <p>40 Comments</p>
+              </div>
+              <div class="topic-reply-container">
+                <div class="reply-header">
+                  <img src="./assets/community-1.png" alt="Community Photo" />
+                  <h3>SOFTCAKE COMMUNITY / Rahma</h3>
+                </div>
+                <p><b>@Thisha Relatee</b>, punyaku kok juga gitu yaa</p>
+                <div class="reply-action-container">
+                  <div class="reply-action">
+                    <img src="./assets/like-icon.png" alt="Like" />
+                    <p>Like</p>
+                  </div>
+                  <div class="reply-action">
+                    <img src="./assets/comment-icon.png" alt="Comment" />
+                    <p>Comment</p>
+                  </div>
+                </div>
+              </div>
+              <div class="topic-reply-container">
+                <div class="reply-header">
+                  <img src="./assets/community-1.png" alt="Community Photo" />
+                  <h3>SOFTCAKE COMMUNITY / Jalal</h3>
+                </div>
+                <p>
+                  <b>@Thisha @Rahma</b> coba pakai non-stick spray, harusnya
+                  lebih efektif
+                </p>
+                <div class="reply-action-container">
+                  <div class="reply-action">
+                    <img src="./assets/like-icon.png" alt="Like" />
+                    <p>Like</p>
+                  </div>
+                  <div class="reply-action">
+                    <img src="./assets/comment-icon.png" alt="Comment" />
+                    <p>Comment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topic-container">
+            <div class="topic-header">
+              <img src="./assets/community-5.png" alt="Community Photo" />
+              <h3>WIRAUSAHA COMMUNITY / Arummi</h3>
+            </div>
+            <div class="topic-body">
+              <div class="short-topic-content">
+                <p class="text-sb">
+                  Ajarin dong puh, sepuhh! Mau buka usaha sendiri, rekomendasiin
+                  business course buat diikutin dong!
+                </p>
+                <div class="action-container">
+                  <div class="topic-action">
+                    <img src="./assets/like-icon.png" alt="Like" />
+                    <p>Like</p>
+                  </div>
+                  <div class="topic-action">
+                    <img src="./assets/comment-icon.png" alt="Comment" />
+                    <p>Comment</p>
+                  </div>
+                  <div class="topic-action">
+                    <img src="./assets/share-iconn.png" alt="Share" />
+                    <p>Share</p>
+                  </div>
+                  <div class="topic-action">
+                    <img src="./assets/report-icon.png" alt="Report" />
+                    <p>Report</p>
+                  </div>
+                </div>
+                <div class="arrow-container">
+                  <img src="./assets/arrow-down.png" alt="Arrow Down" />
+                  <p class="text-b">Lihat 35 Balasan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topic-container">
+            <div class="topic-header">
+              <img src="./assets/community-2.png" alt="Community Photo" />
+              <h3>PASTRY COMMUNITY / Ruben</h3>
+            </div>
+            <div class="topic-body">
+              <div class="short-topic-content">
+                <p class="text-sb">
+                  Cara bikin croissant yang ala-ala prancis gitu gimana yak?
+                  Kasi tau class rekomendasi pastry gaiss!
+                </p>
+                <div class="action-container">
+                  <div class="topic-action">
+                    <img src="./assets/like-icon.png" alt="Like" />
+                    <p>Like</p>
+                  </div>
+                  <div class="topic-action">
+                    <img src="./assets/comment-icon.png" alt="Comment" />
+                    <p>Comment</p>
+                  </div>
+                  <div class="topic-action">
+                    <img src="./assets/share-iconn.png" alt="Share" />
+                    <p>Share</p>
+                  </div>
+                  <div class="topic-action">
+                    <img src="./assets/report-icon.png" alt="Report" />
+                    <p>Report</p>
+                  </div>
+                </div>
+                <div class="arrow-container">
+                  <img src="./assets/arrow-down.png" alt="Arrow Down" />
+                  <p class="text-b">Lihat 20 Balasan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="top-footer">
+        <p class="text-b text-cream">
+          "Interested in learning more? Contact our team today!"
+        </p>
+        <a href="./about.html" class="text-lh footer-btn">Contact Us</a>
+      </div>
+      <div class="bottom-footer">
+        <div class="footer-section-container">
+          <div class="footer-left">
+            <div>
+              <div class="media-container">
+                <img
+                  src="./assets/instagram-footer.png"
+                  alt="Instagram Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/facebook-footer.png"
+                  alt="Facebook Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/tiktok-footer.png"
+                  alt="TikTok Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/youtube-footer.png"
+                  alt="Youtube Icon"
+                  class="media-icon"
+                />
+              </div>
+              <p>JAKARTA - MALANG - SURABAYA</p>
+            </div>
+            <p>amourbake123@gmail.com</p>
+          </div>
+          <div class="footer-right">
+            <p class="text-b">Company</p>
+            <div class="footer-right-item">
+              <a href="./index.html">Home</a>
+              <a href="./about.html">About Us</a>
+              <a href="./about.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p class="text-b">Community</p>
+            <div class="footer-right-item">
+              <p>Whatsapp</p>
+              <p>Discord</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="privacy-text">Privacy Policy</p>
+      </div>
+    </footer>
+  </body>
+</html>

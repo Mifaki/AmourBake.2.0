@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <script src="./script/header.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="header-logo-container">
+          <img src="./assets/logo.svg" alt="logo" class="header-img" />
+          <div>
+            <p id="title" class="text-b text-white">AmourBake</p>
+            <p id="sub-title" class="text-lh text-white">Course Bakery</p>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="header-contact-container">
+            <img src="./assets/qr.png" alt="Instagram QR" class="header-img" />
+            <div>
+              <div class="contact-number">
+                <img src="./assets/line.png" alt="line icon" />
+                <p class="text-lh text-cream">@amourbake</p>
+              </div>
+              <div class="contact-number">
+                <img src="./assets/phone.png" alt="phone icon" />
+                <p class="text-lh text-cream">+628233367777</p>
+              </div>
+            </div>
+          </div>
+          <div class="header-btn-container">
+            <a href="./login.html" class="text-lh header-btn">Sign In</a>
+            <a href="./register.html" class="text-lh header-btn">Sign Up</a>
+          </div>
+          <a href="./profile.html" class="user-container">
+            <p class="text-b text-cream">Jennifer Shakila</p>
+            <img src="./assets/avatar.png" alt="avatar" class="header-img" />
+          </a>
+        </div>
+        <div class="mobile-nav">
+          <input type="checkbox" id="check" />
+          <div class="menu">
+            <div class="nav">
+              <a href="login.html" class="notLoggedIn">Login</a>
+              <a href="register.html" class="notLoggedIn">Register</a>
+              <a href="profile.html" id="LoggedIn">Profile</a>
+              <a href="index.html" >Home</a>
+              <a href="about.html">About Us</a>
+              <a href="tutorial.html">Tutorial</a>
+              <a href="course.html">Course</a>
+              <a href="community.html">Community</a>
+            </div>
+            <label for="check" class="close-menu"
+              ><i class="fas fa-times"></i
+            ></label>
+          </div>
+          <label for="check" class="open-menu"
+            ><i class="fas fa-bars"></i
+          ></label>
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <input type="checkbox" id="check" />
+        <div class="menu">
+          <div class="nav">
+            <a href="login.html" class="notLoggedIn">Login</a>
+            <a href="register.html" class="notLoggedIn">Register</a>
+            <a href="profile.html" id="LoggedIn">Profile</a>
+            <a href="about.html">About Us</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="course.html">Course</a>
+            <a href="community.html">Community</a>
+          </div>
+          <label for="check" class="close-menu"
+            ><i class="fas fa-times"></i
+          ></label>
+        </div>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </div>
+      <div class="header-navigation text-brown">
+        <a href="./index.html" class="nav-item text-b">Home</a>
+        <a href="./about.html" class="nav-item">About Us</a>
+        <a href="./tutorial.html" class="nav-item">Tutorial</a>
+        <a href="./course.html" class="nav-item">Course</a>
+        <a href="./community.html" class="nav-item">Community</a>
+      </div>
+    </header>
+    <main>
+      <div class="hero"></div>
+      <div class="course-container">
+        <img src="./assets/home-course-1.jpg" alt="Course 1" />
+        <div class="course-text-container">
+          <p>
+            AmourBake adalah rumah bagi para baker pemula dan pengusaha kuliner
+            masa depan. Dengan akses ke kursus-kursus terbaik, sumber daya
+            eksklusif, dan bimbingan dari para ahli, kami bertekad membantu Anda
+            mencapai sukses dalam industri bakery dan kuliner. Temukan potensi
+            Anda di AmourBake, dan mulailah perjalanan menuju keterampilan yang
+            mengagumkan.
+          </p>
+          <a href="" class="text-white text-b">Lihat Course!</a>
+        </div>
+        <img src="./assets/home-course-2.jpg" alt="Course 1" />
+      </div>
+      <div class="main-container home-gap">
+        <section>
+          <h1 class="text-b">Testimoni</h1>
+          <div class="testimoni-container">
+            <div class="testimoni-card">
+              <img
+                src="./assets/avatar-testimoni-1.png"
+                alt="avatar"
+                class=""
+              />
+              <div>
+                <p class="testimoni-name">Tito Sanjaya</p>
+                <p class="testimoni-desc">
+                  Saya sangat terkesan dengan kualitas kursus di AmourBake.
+                  Instruktur sangat berpengetahuan dan selalu siap membantu.
+                  Saya sekarang bisa membuat kue-kue yang sebelumnya hanya bisa
+                  saya impikan. Sangat merekomendasikan!
+                </p>
+              </div>
+            </div>
+            <div class="testimoni-card">
+              <img src="./assets/avatar-testimoni-2.png" alt="avatar" />
+              <div>
+                <p class="testimoni-name">Chelsea Jain</p>
+                <p class="testimoni-desc">
+                  Saya baru saja menyelesaikan kursus pastry di AmourBake.
+                  Materi yang diajarkan sangat mendalam dan mudah dipahami. Saya
+                  merasa lebih percaya diri untuk memulai bisnis bakery saya
+                  sendiri. Terima kasih AmourBake!
+                </p>
+              </div>
+            </div>
+            <div class="testimoni-card">
+              <img src="./assets/avatar-testimoni-3.png" alt="avatar" />
+              <div>
+                <p class="testimoni-name">Wisnu Poernomo</p>
+                <p class="testimoni-desc">
+                  Saya sangat mengapresiasi komunitas yang hangat di AmourBake.
+                  Saya telah bertemu dengan baker-baker lain yang berbagi minat
+                  dan tujuan serupa. AmourBake benar-benar memberikan pengalaman
+                  yang luar biasa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>FAQs</h1>
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check1" checked />
+              <label class="accordion-label" for="check1"
+                >Apa yang membedakan AmourBake dari platform kursus online
+                lainnya?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  AmourBake membedakan diri dengan menyajikan kurikulum yang
+                  didesain secara komprehensif dan terstruktur, dengan fokus
+                  pada pengembangan keterampilan baking dan strategi bisnis
+                  kuliner. Selain itu, platform kami menyediakan pengalaman
+                  pembelajaran yang interaktif dengan integrasi teknologi
+                  terbaru.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check2" />
+              <label class="accordion-label" for="check2"
+                >Bagaimana cara mendaftar untuk kursus di AmourBake?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Untuk mendaftar kursus di AmourBake, kunjungi
+                  www.amourbake.com, pilih kursus yang diinginkan, daftar, dan
+                  selesaikan proses pendaftaran. Kami menyajikan kurikulum
+                  komprehensif dengan fokus pada keterampilan baking dan
+                  strategi bisnis kuliner. Temukan pengalaman pembelajaran
+                  interaktif dengan teknologi terbaru di AmourBake. Jika ada
+                  pertanyaan, tim dukungan pelanggan kami siap membantu.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check3" />
+              <label class="accordion-label" for="check3"
+                >Apakah saya memerlukan pengalaman dalam baking untuk mengikuti
+                kursus di AmourBake?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Tidak, Anda tidak memerlukan pengalaman baking sebelumnya
+                  untuk mengikuti kursus di AmourBake. Kami menyediakan kursus
+                  yang cocok untuk semua tingkat, termasuk bagi pemula yang
+                  ingin memulai perjalanan mereka dalam dunia baking. Instruktur
+                  kami akan membimbing Anda melalui setiap langkah, memastikan
+                  Anda dapat mengikuti dan memahami materi dengan baik. Jadi,
+                  tidak perlu khawatir jika Anda belum memiliki pengalaman
+                  baking sebelumnya!
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check4" />
+              <label class="accordion-label" for="check4"
+                >Bagaimana cara mengakses kursus yang telah saya daftar?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Untuk mengakses kursus yang telah Anda daftar di AmourBake,
+                  login ke akun Anda, pergi ke dashboard, cari bagian "Kursus
+                  Saya" atau serupa, dan pilih kursus yang ingin diakses. Dengan
+                  langkah-langkah tersebut, Anda dapat dengan mudah memulai
+                  pembelajaran Anda. Jika diperlukan, gunakan panduan atau
+                  bantuan pengguna yang disediakan oleh platform.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check5" />
+              <label class="accordion-label" for="check5"
+                >Bisakah saya mengakses kursus saya kapan saja atau apakah ada
+                jadwal tertentu yang harus diikuti?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Ya, Anda dapat mengakses kursus Anda di AmourBake kapan saja
+                  sesuai kenyamanan Anda. Platform kami dirancang untuk
+                  memberikan fleksibilitas kepada para pelajar, sehingga Anda
+                  dapat belajar sesuai dengan jadwal Anda sendiri. Tidak ada
+                  batasan waktu atau jadwal tertentu yang harus diikuti,
+                  memungkinkan Anda mengatur waktu pembelajaran sesuai dengan
+                  preferensi Anda.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check6" />
+              <label class="accordion-label" for="check6"
+                >Apakah AmourBake menyediakan sertifikat setelah menyelesaikan
+                kursus?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Tentu, setelah berhasil menyelesaikan kursus di AmourBake,
+                  Anda akan menerima sertifikat sebagai pengakuan atas prestasi
+                  Anda. Sertifikat ini dapat memberikan nilai tambah pada
+                  keterampilan dan pengetahuan baking Anda, serta dapat
+                  digunakan untuk mendukung perjalanan karier Anda dalam
+                  industri kuliner.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check7" />
+              <label class="accordion-label" for="check7"
+                >Apakah AmourBake menyediakan sarana dukungan atau forum
+                komunitas bagi penggunanya?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Ya, AmourBake menyediakan sarana dukungan dan forum komunitas
+                  yang aktif bagi para penggunanya. Melalui platform ini, Anda
+                  dapat berinteraksi dengan instruktur, sesama peserta kursus,
+                  dan para ahli dalam industri kuliner. Forum komunitas
+                  AmourBake merupakan tempat yang ideal untuk bertukar
+                  pengalaman, mendapatkan saran, dan membangun jaringan dengan
+                  mereka yang memiliki minat serupa dalam dunia baking.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check8" />
+              <label class="accordion-label" for="check8"
+                >Apakah AmourBake memiliki kursus lanjutan untuk mereka yang
+                ingin meningkatkan keterampilan mereka lebih jauh?</label
+              >
+              <div class="accordion-content">
+                <p>
+                  Ya, AmourBake menyediakan kursus lanjutan bagi mereka yang
+                  ingin mengembangkan keterampilan mereka lebih jauh. Kursus ini
+                  dirancang untuk memberikan tantangan baru, teknik yang lebih
+                  mendalam, dan pemahaman yang lebih komprehensif dalam dunia
+                  baking. Dengan mengikuti kursus lanjutan, Anda dapat terus
+                  meningkatkan kemampuan Anda dan menjelajahi aspek-aspek
+                  kreatif dan teknis yang lebih tinggi dalam seni baking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="top-footer">
+        <p class="text-b text-cream">
+          "Interested in learning more? Contact our team today!"
+        </p>
+        <a href="./about.html" class="text-lh footer-btn">Contact Us</a>
+      </div>
+      <div class="bottom-footer">
+        <div class="footer-section-container">
+          <div class="footer-left">
+            <div>
+              <div class="media-container">
+                <img
+                  src="./assets/instagram-footer.png"
+                  alt="Instagram Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/facebook-footer.png"
+                  alt="Facebook Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/tiktok-footer.png"
+                  alt="TikTok Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/youtube-footer.png"
+                  alt="Youtube Icon"
+                  class="media-icon"
+                />
+              </div>
+              <p class="footer-text">JAKARTA - MALANG - SURABAYA</p>
+            </div>
+            <p class="footer-text">amourbake123@gmail.com</p>
+          </div>
+          <div class="footer-right">
+            <p class="text-b">Company</p>
+            <div class="footer-right-item">
+              <a href="./index.html">Home</a>
+              <a href="./about.html">About Us</a>
+              <a href="./about.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p class="text-b">Community</p>
+            <div class="footer-right-item">
+              <p>Whatsapp</p>
+              <p>Discord</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="privacy-text footer-text">Privacy Policy</p>
+      </div>
+    </footer>
+  </body>
+</html>

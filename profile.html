@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <script src="./script/header.js" defer></script>
+    <script src="./script/profile.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="header-logo-container">
+          <img src="./assets/logo.svg" alt="logo" class="header-img" />
+          <div>
+            <p id="title" class="text-b text-white">AmourBake</p>
+            <p id="sub-title" class="text-lh text-white">Course Bakery</p>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="header-contact-container">
+            <img src="./assets/qr.png" alt="Instagram QR" class="header-img" />
+            <div>
+              <div class="contact-number">
+                <img src="./assets/line.png" alt="line icon" />
+                <p class="text-lh text-cream">@amourbake</p>
+              </div>
+              <div class="contact-number">
+                <img src="./assets/phone.png" alt="phone icon" />
+                <p class="text-lh text-cream">+628233367777</p>
+              </div>
+            </div>
+          </div>
+          <div class="header-btn-container">
+            <a href="./login.html" class="text-lh header-btn">Sign In</a>
+            <a href="./register.html" class="text-lh header-btn">Sign Up</a>
+          </div>
+          <a href="./profile.html" class="user-container">
+            <p class="text-b text-cream">Jennifer Shakila</p>
+            <img src="./assets/avatar.png" alt="avatar" class="header-img" />
+          </a>
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <input type="checkbox" id="check" />
+        <div class="menu">
+          <div class="nav">
+            <a href="login.html" class="notLoggedIn">Login</a>
+            <a href="register.html" class="notLoggedIn">Register</a>
+            <a href="profile.html" id="LoggedIn">Profile</a>
+            <a href="about.html">About Us</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="course.html">Course</a>
+            <a href="community.html">Community</a>
+          </div>
+          <label for="check" class="close-menu"
+            ><i class="fas fa-times"></i
+          ></label>
+        </div>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </div>
+      <div class="header-navigation text-brown">
+        <a href="./index.html" class="nav-item">Home</a>
+        <a href="./about.html" class="nav-item">About Us</a>
+        <a href="./tutorial.html" class="nav-item">Tutorial</a>
+        <a href="./course.html" class="nav-item">Course</a>
+        <a href="./community.html" class="nav-item">Community</a>
+      </div>
+    </header>
+    <main class="main-container page-gap">
+      <section class="profile-container">
+        <div class="left-profile">
+          <div>
+            <img
+              src="./assets/avatar-profile.png"
+              alt="avatar"
+              class="profile-avatar"
+            />
+            <p class="text-b username">Jennifer Shakila</p>
+            <p>Joined 2 years ago</p>
+          </div>
+          <a href="" class="edit-btn text-b">Edit Profile</a>
+        </div>
+        <div class="right-profile">
+          <div>
+            <label for="name" class="text-b">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value="Jennifer Shakila"
+              readonly
+            />
+          </div>
+          <div>
+            <label for="email" class="text-b">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value="Jennifershakila12@gmail.com"
+              readonly
+            />
+          </div>
+          <div>
+            <label for="phoneNumber" class="text-b">Phone Number</label>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              value="+6281389996767"
+              readonly
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <p class="text-b">Komunitas</p>
+        <div class="comunity-container">
+          <div class="comunity-card">
+            <div class="comunity-name">
+              <img src="./assets/softcake.png" alt="softcake" />
+              <h2 class="text-b">SOFTCAKE COMMUNITY</h2>
+            </div>
+            <p>42.124 Members</p>
+          </div>
+          <div class="comunity-card">
+            <div class="comunity-name">
+              <img src="./assets/cupcake.png" alt="softcake" />
+              <h2 class="text-b">CUPCAKE COMMUNITY</h2>
+            </div>
+            <p>17.074 Members</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <p class="text-b">Lainnya</p>
+        <div class="other-container">
+          <div class="other-item">
+            <div class="other-icon">
+              <img src="./assets/gear.png" alt="setting" />
+              <p class="text-b">Pengaturan</p>
+            </div>
+            <div class="profile-divider"></div>
+            <div></div>
+          </div>
+          <div class="other-item">
+            <div class="other-icon" id="logoutBtn">
+              <img src="./assets/logout.png" alt="setting" />
+              <p class="text-b">Log Out</p>
+            </div>
+            <div class="profile-divider"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="top-footer">
+        <p class="text-b text-cream">
+          "Interested in learning more? Contact our team today!"
+        </p>
+        <a href="./about.html" class="text-lh footer-btn">Contact Us</a>
+      </div>
+      <div class="bottom-footer">
+        <div class="footer-section-container">
+          <div class="footer-left">
+            <div>
+              <div class="media-container">
+                <img
+                  src="./assets/instagram-footer.png"
+                  alt="Instagram Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/facebook-footer.png"
+                  alt="Facebook Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/tiktok-footer.png"
+                  alt="TikTok Icon"
+                  class="media-icon"
+                />
+                <img
+                  src="./assets/youtube-footer.png"
+                  alt="Youtube Icon"
+                  class="media-icon"
+                />
+              </div>
+              <p>JAKARTA - MALANG - SURABAYA</p>
+            </div>
+            <p>amourbake123@gmail.com</p>
+          </div>
+          <div class="footer-right">
+            <p class="text-b">Company</p>
+            <div class="footer-right-item">
+              <a href="./index.html">Home</a>
+              <a href="./about.html">About Us</a>
+              <a href="./about.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p class="text-b">Community</p>
+            <div class="footer-right-item">
+              <p>Whatsapp</p>
+              <p>Discord</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="privacy-text">Privacy Policy</p>
+      </div>
+    </footer>
+  </body>
+</html>

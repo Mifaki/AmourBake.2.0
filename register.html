@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
+    <script src="./script/header.js" defer></script>
+    <script src="./script/register.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="header-logo-container">
+          <img src="./assets/logo.svg" alt="logo" class="header-img" />
+          <div>
+            <p id="title" class="text-b text-white">AmourBake</p>
+            <p id="sub-title" class="text-lh text-white">Course Bakery</p>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="header-contact-container">
+            <img src="./assets/qr.png" alt="Instagram QR" class="header-img" />
+            <div>
+              <div class="contact-number">
+                <img src="./assets/line.png" alt="line icon" />
+                <p class="text-lh text-cream">@amourbake</p>
+              </div>
+              <div class="contact-number">
+                <img src="./assets/phone.png" alt="phone icon" />
+                <p class="text-lh text-cream">+628233367777</p>
+              </div>
+            </div>
+          </div>
+          <div class="header-btn-container">
+            <a href="./login.html" class="text-lh header-btn">Sign In</a>
+            <a href="./register.html" class="text-lh header-btn">Sign Up</a>
+          </div>
+          <!-- <div class="user-container">
+            <p class="text-b text-cream">Jennifer Shakila</p>
+            <img src="./assets/avatar.png" alt="avatar" class="header-img" />
+          </div> -->
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <input type="checkbox" id="check" />
+        <div class="menu">
+          <div class="nav">
+            <a href="login.html" class="notLoggedIn">Login</a>
+            <a href="register.html" class="notLoggedIn">Register</a>
+            <a href="profile.html" id="LoggedIn">Profile</a>
+            <a href="about.html">About Us</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="course.html">Course</a>
+            <a href="community.html">Community</a>
+          </div>
+          <label for="check" class="close-menu"
+            ><i class="fas fa-times"></i
+          ></label>
+        </div>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </div>
+      <div class="header-navigation text-brown">
+        <a href="./index.html" class="nav-item">Home</a>
+        <a href="./about.html" class="nav-item">About Us</a>
+        <a href="./tutorial.html" class="nav-item">Tutorial</a>
+        <a href="./course.html" class="nav-item">Course</a>
+        <a href="./community.html" class="nav-item">Community</a>
+      </div>
+    </header>
+    <main class="main-container">
+      <div class="auth-container-center">
+        <div class="auth-container">
+          <p class="auth-title text-dark-brown text-b">Sign Up</p>
+          <form class="auth-form" id="signUpForm">
+            <div>
+              <label for="name" class="text-b text-dark-brown">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="text-b text-dark-brown">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+            <div>
+              <label for="password" class="text-b text-dark-brown"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div>
+              <label for="phoneNumber" class="text-b text-dark-brown"
+                >Phone Number</label
+              >
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="Enter your Phone Number"
+                required
+              />
+            </div>
+            <button type="submit" class="text-b">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
