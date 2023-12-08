@@ -170,68 +170,77 @@ function redirectToDetail() {
   window.location.href = `tutorial-detail.html`;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const cardContainer = document.getElementById("cardContainer");
-  const recomendedCardContainer = document.getElementById(
-    "recomendedCardContainer"
-  );
+function generateCards(data) {
+  cardContainer.innerHTML = "";
 
-  function generateCards(data) {
-    cardContainer.innerHTML = "";
-
-    data.forEach((item) => {
-      const cardHtml = `
-          <div class="card" data-id="${item.id}" onclick="redirectToDetail()">
-            <img src="${item.thumbnail}.jpg" alt="${item.title}">
-            <div class="card-text-container">
-              <h1>${item.title}</h1>
-              <p>${item.category ? `Kategori: ${item.category}` : ""}</p>
-            </div>
+  data.forEach((item) => {
+    const cardHtml = `
+        <div class="card" data-id="${item.id}" onclick="redirectToDetail()">
+          <img src="${item.thumbnail}.jpg" alt="${item.title}">
+          <div class="card-text-container">
+            <h1>${item.title}</h1>
+            <p>${item.category ? `Kategori: ${item.category}` : ""}</p>
           </div>
-        `;
-      cardContainer.insertAdjacentHTML("beforeend", cardHtml);
-    });
-  }
-
-  function generateRecomendedCard(data) {
-    recomendedCardContainer.innerHTML = "";
-
-    data.forEach((item) => {
-      const cardHtml = `
-          <div class="card" data-id="${item.id}" onclick="redirectToDetail()">
-            <img src="${item.thumbnail}.jpg" alt="${item.title}">
-            <div class="card-text-container">
-              <h1>${item.title}</h1>
-              <p>${item.category ? `Kategori: ${item.category}` : ""}</p>
-            </div>
-          </div>
-        `;
-      recomendedCardContainer.insertAdjacentHTML("beforeend", cardHtml);
-    });
-  }
-
-  function updateCardVisibility() {
-    const recipeRadio = document.getElementById("recipe");
-    const articleRadio = document.getElementById("article");
-
-    if (recipeRadio.checked) {
-      generateCards(recipeData.filter((item) => !item.isRecomended));
-      generateRecomendedCard(recipeData.filter((item) => item.isRecomended));
-    } else if (articleRadio.checked) {
-      generateCards(articleData.filter((item) => !item.isRecomended));
-      generateRecomendedCard(articleData.filter((item) => item.isRecomended));
-    }
-  }
-
-  updateCardVisibility();
-
-  const radioButtons = document.querySelectorAll('input[name="filter"]');
-  radioButtons.forEach(function (radio) {
-    radio.addEventListener("change", updateCardVisibility);
+        </div>
+      `;
+    cardContainer.insertAdjacentHTML("beforeend", cardHtml);
   });
-});
+}
+
+function generateRecomendedCard(data) {
+  recomendedCardContainer.innerHTML = "";
+
+  data.forEach((item) => {
+    const cardHtml = `
+        <div class="card" data-id="${item.id}" onclick="redirectToDetail()">
+          <img src="${item.thumbnail}.jpg" alt="${item.title}">
+          <div class="card-text-container">
+            <h1>${item.title}</h1>
+            <p>${item.category ? `Kategori: ${item.category}` : ""}</p>
+          </div>
+        </div>
+      `;
+    recomendedCardContainer.insertAdjacentHTML("beforeend", cardHtml);
+  });
+}
+
+function updateCardVisibility() {
+  const recipeRadio = document.getElementById("recipe");
+  const articleRadio = document.getElementById("article");
+
+  if (recipeRadio.checked) {
+    generateCards(recipeData.filter((item) => !item.isRecomended));
+    generateRecomendedCard(recipeData.filter((item) => item.isRecomended));
+  } else if (articleRadio.checked) {
+    generateCards(articleData.filter((item) => !item.isRecomended));
+    generateRecomendedCard(articleData.filter((item) => item.isRecomended));
+  }
+}
+
+function filterBy(option) {
+  console.log("Filtering by:", option);
+
+  const cardContainer = document.getElementById("cardContainer");
+  const recomendedCardContainer = document.getElementById("recomended");
+
+  if (option === "all") {
+    cardContainer.style.display = "flex";
+    recomendedCardContainer.style.display = "block";
+    updateCardVisibility();
+  } else {
+    const filteredRecipeData = recipeData.filter((item) => item.category === option);
+    generateCards(filteredRecipeData);
+    generateRecomendedCard([]); 
+
+    cardContainer.style.display = "flex";
+    recomendedCardContainer.style.display = "none";
+  }
+
+  document.getElementById("filterDropdown").style.display = "none";
+}
 
 document.addEventListener("DOMContentLoaded", function () {
+  // VISBILITY LOGIC
   const bestRecipeSection = document.querySelector(".best-recipe");
   const bestArticleSection = document.querySelector(".best-article");
 
@@ -249,9 +258,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   updateBestVisibility();
+  updateCardVisibility();
 
+  // FILTER LOGIC
   const radioButtons = document.querySelectorAll('input[name="filter"]');
   radioButtons.forEach(function (radio) {
     radio.addEventListener("change", updateBestVisibility);
+  });
+  radioButtons.forEach(function (radio) {
+    radio.addEventListener("change", updateCardVisibility);
+  });
+
+  const filterBtn = document.getElementById("filterBtn");
+  const filterDropdown = document.getElementById("filterDropdown");
+
+  filterBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+    filterDropdown.style.display =
+      filterDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.body.addEventListener("click", function () {
+    filterDropdown.style.display = "none";
   });
 });

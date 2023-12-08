@@ -99,11 +99,22 @@
             <i class="fa fa-search search-icon" for="search"></i>
             <input type="text" name="search" class="search-field" />
           </div>
-          <div class="filter-btn">
-            <img src="./assets/filter-icon.png" alt="Filter Icon" />
+          <div class="btn-container">
+            <div class="filter-btn"  id="filterBtn">
+              <img src="./assets/filter-icon.png" alt="Filter Icon" />
+            </div>
+            <div class="filter-dropdown" id="filterDropdown">
+              <a href="#" onclick="filterBy('all')">Semua</a>
+              <a href="#" onclick="filterBy('Pastry')">Pastry</a>
+              <a href="#" onclick="filterBy('Brownies')">Brownies</a>
+              <a href="#" onclick="filterBy('Cake')">Cake</a>
+              <a href="#" onclick="filterBy('Bread')">Bread</a>
+              <a href="#" onclick="filterBy('Cookies')">Cookies</a>
+            </div>
           </div>
         </div>
       </section>
+
       <!-- Best Recipe -->
       <section class="best-recipe text-white">
         <div class="best-title">
@@ -136,7 +147,7 @@
           <!-- card Automatically Generated -->
         </div>
       </section>
-      <section>
+      <section id="recomended">
         <h1>Rekomendasi</h1>
         <div class="card-container" id="recomendedCardContainer">
           <!-- card Automatically Generated -->
