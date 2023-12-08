@@ -89,8 +89,8 @@ section > h1 {
 }
 
 .card {
-  max-width: 460px;
-  min-width: 460px;
+  max-width: 300px;
+  min-width: 300px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 32px;
   cursor: pointer;
@@ -100,11 +100,15 @@ section > h1 {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 28px 44px 28px 44px;
+  padding: 28px 44px;
 }
 
 .card-text-container > h1 {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.card-text-container > p {
+  font-size: 12px;
 }
 
 /* Responsive Styles */
@@ -129,7 +133,8 @@ section > h1 {
     text-align: center;
   }
 
-  .detail-text-container-mobile > div > h1 {
+  .detail-text-container-mobile > div > h1,
+  section > h1 {
     font-size: 18px;
   }
 

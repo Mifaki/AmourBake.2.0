@@ -294,8 +294,14 @@ header {
     right: 0;
   }
 
+  .footer-btn {
+    fonts-size: 12px;
+    padding: 8px 14px;
+    border-radius: 999999px;
+  }
+
   .top-footer > p {
-    font-size: 24px;
+    font-size: 14px;
   }
 
   .bottom-footer {
@@ -340,11 +346,6 @@ header {
     height: 28px;
     aspect-ratio: 1/1;
     cursor: pointer;
-  }
-
-  .footer-btn {
-    font-size: 16px;
-    padding: 12px 24px;
   }
 
   .footer-text {
