@@ -129,14 +129,14 @@ header {
 }
 
 .top-footer > p {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 }
 
 .footer-btn {
-  font-size: 16px;
+  font-size: 14px;
   background-color: #f6edd7;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 999999px;
 }
 
