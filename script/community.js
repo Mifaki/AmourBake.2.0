@@ -81,10 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const galerySection = document.getElementById("galerySection");
   const forumSection = document.getElementById("forumSection");
 
+  generateCommunityCards();
+
   communityFilter.addEventListener("change", function () {
     let selectedValue = communityFilter.value;
     if (selectedValue === "galery") {
-      console.log('p');
       galerySection.style.display = "block";
       forumSection.style.display = "none";
     } else if (selectedValue === "forum") {
