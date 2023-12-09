@@ -81,19 +81,29 @@ section > h1 {
   margin-bottom: 32px;
 }
 
+.carousel {
+  position: relative;
+  margin: 0 auto;
+}
+
 .card-container {
+  position: relative;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.4s ease; 
   gap: 18px;
-  overflow-x: auto;
+  padding: 4px 0;
 }
 
 .card {
   max-width: 300px;
   min-width: 300px;
+  min-height: 272px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 32px;
   cursor: pointer;
+  transition: transform 0.4s cubic-bezier(.47,.13,.15,.89);
 }
 
 .card > img {
@@ -115,6 +125,41 @@ section > h1 {
 
 .card-text-container > p {
   font-size: 12px;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  background-color: rgba(150, 150, 150, 0.3);
+  width: 42px;
+  height: 42px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: white;
+  -webkit-user-select: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-left {
+  left: 0;
+}
+
+.nav-right {
+  right: 0;
 }
 
 /* Responsive Styles */
@@ -158,6 +203,13 @@ section > h1 {
     max-width: 340px;
     min-width: 340px;
   }
+
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   .card-text-container {
     padding: 28px 24px 28px 24px;

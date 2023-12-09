@@ -3,7 +3,7 @@ recBakingSeminarData = [
     id: 1,
     thumbnail: "./assets/seminar-baking-1.png",
     title: "Menaklukkan Dunia Bakery: Teknik Terbaru dan Inovasi",
-    speaker: "Aiugo Adhinata",
+    speaker: "Budi Santoso",
     place: "Online",
     fee: "Gratis",
   },
@@ -11,23 +11,39 @@ recBakingSeminarData = [
     id: 2,
     thumbnail: "./assets/seminar-baking-2.png",
     title: "Seni Membuat Croissant: Seminar Praktis Langsung dari Ahlinya",
-    speaker: "Aiugo Adhinata",
+    speaker: "Citra Pratiwi",
     place: "Online",
     fee: "Gratis",
   },
   {
     id: 3,
-    thumbnail: "./assets/seminar-baking-1.png",
-    title: "Menaklukkan Dunia Bakery: Teknik Terbaru dan Inovasi",
-    speaker: "Aiugo Adhinata",
+    thumbnail: "./assets/seminar-baking-3.png",
+    title: "Rahasia Kelezatan Cake Pudding: Workshop dengan Master Baker",
+    speaker: "Hendra Wijaya",
     place: "Online",
     fee: "Gratis",
   },
   {
     id: 4,
-    thumbnail: "./assets/seminar-baking-2.png",
-    title: "Seni Membuat Croissant: Seminar Praktis Langsung dari Ahlinya",
-    speaker: "Aiugo Adhinata",
+    thumbnail: "./assets/seminar-baking-4.png",
+    title: "Inovasi Cookies Terbaru: Pelajari Resep dari Ahlinya",
+    speaker: "Anita Susilo",
+    place: "Online",
+    fee: "Gratis",
+  },
+  {
+    id: 5,
+    thumbnail: "./assets/seminar-baking-5.png",
+    title: "Teknik Terbaru dalam Membuat Donat: Workshop Online",
+    speaker: "Dian Kusuma",
+    place: "Online",
+    fee: "Gratis",
+  },
+  {
+    id: 6,
+    thumbnail: "./assets/seminar-baking-6.png",
+    title: "Aneka Resep Pastry: Pelajari Langsung dari Pastry Chef",
+    speaker: "Ratna Sari",
     place: "Online",
     fee: "Gratis",
   },
@@ -38,7 +54,7 @@ recBusinessSeminarData = [
     id: 1,
     thumbnail: "./assets/seminar-business-1.png",
     title: "Kupas Tuntas Tren Bisnis Bakery 2023: Strategi Adaptasi ...",
-    speaker: "Aiugo Adhinata",
+    speaker: "Ahmad Fauzi",
     place: "Online",
     fee: "Gratis",
   },
@@ -46,23 +62,39 @@ recBusinessSeminarData = [
     id: 2,
     thumbnail: "./assets/seminar-business-2.png",
     title: "Membangun Jaringan: Strategi Networking untuk Pemilik Bakery",
-    speaker: "Aiugo Adhinata",
+    speaker: "Siti Rahayu",
     place: "Online",
     fee: "Gratis",
   },
   {
     id: 3,
-    thumbnail: "./assets/seminar-business-1.png",
-    title: "Kupas Tuntas Tren Bisnis Bakery 2023: Strategi Adaptasi ...",
-    speaker: "Aiugo Adhinata",
+    thumbnail: "./assets/seminar-business-3.png",
+    title: "Pemasaran Efektif: Tips dan Trik untuk Bisnis Bakery Anda",
+    speaker: "Rizky Pratama",
     place: "Online",
     fee: "Gratis",
   },
   {
     id: 4,
-    thumbnail: "./assets/seminar-business-2.png",
-    title: "Membangun Jaringan: Strategi Networking untuk Pemilik Bakery",
-    speaker: "Aiugo Adhinata",
+    thumbnail: "./assets/seminar-business-4.png",
+    title: "Manajemen Keuangan: Mengelola Keuangan Bisnis Bakery",
+    speaker: "Nurul Indah",
+    place: "Online",
+    fee: "Gratis",
+  },
+  {
+    id: 5,
+    thumbnail: "./assets/seminar-business-5.png",
+    title: "Inovasi Produk: Menciptakan Menu Baru yang Menggoda",
+    speaker: "Aditya Wijaya",
+    place: "Online",
+    fee: "Gratis",
+  },
+  {
+    id: 6,
+    thumbnail: "./assets/seminar-business-6.png",
+    title: "Strategi Branding: Membangun Brand yang Kuat untuk Bakery Anda",
+    speaker: "Lia Putri",
     place: "Online",
     fee: "Gratis",
   },
@@ -156,11 +188,21 @@ businessCourseData = [
   },
 ];
 
-function generateSeminarCards(data) {
+const bakingInViewport = 2;
+const businessInViewport = 2;
+let bakingPos = 0;
+let businessPos = 0;
+
+const rightNav = document.querySelector(".nav-right");
+const leftNav = document.querySelector(".nav-left");
+
+function generateSeminarCards(data, startPos, cardsInViewport) {
   const seminarCardContainer = document.getElementById("seminarCardContainer");
   seminarCardContainer.innerHTML = "";
+  console.log(data);
+  const visibleData = data.slice(startPos, startPos + cardsInViewport);
 
-  data.forEach((seminar) => {
+  visibleData.forEach((seminar) => {
     const seminarCard = document.createElement("div");
     seminarCard.classList.add("seminar-card");
     seminarCard.style.backgroundImage = `url('${seminar.thumbnail}')`;
@@ -180,12 +222,33 @@ function generateSeminarCards(data) {
     `;
 
     seminarCard.addEventListener("click", function () {
-      window.location.href = "course-detail.html"; // Redirect to course-detail.html
+      window.location.href = "course-detail.html";
     });
 
     seminarCardContainer.appendChild(seminarCard);
   });
 }
+
+function bakingCardsRight() {
+  bakingPos = (bakingPos + bakingInViewport) % recBakingSeminarData.length;
+  generateSeminarCards(recBakingSeminarData, bakingPos, bakingInViewport);
+}
+
+function bakingCardsLeft() {
+  bakingPos = (bakingPos - bakingInViewport + recBakingSeminarData.length) % recBakingSeminarData.length;
+  generateSeminarCards(recBakingSeminarData, bakingPos, bakingInViewport);
+}
+
+function businessCardsRight() {
+  businessPos = (businessPos + businessInViewport) % recBusinessSeminarData.length;
+  generateSeminarCards(recBusinessSeminarData, businessPos, businessInViewport);
+}
+
+function businessCardsLeft() {
+  businessPos = (businessPos - businessInViewport + recBusinessSeminarData.length) % recBusinessSeminarData.length;
+  generateSeminarCards(recBusinessSeminarData, businessPos, businessInViewport);
+}
+
 
 function generateCourseCards(data) {
   const courseCardContainer = document.getElementById("courseCardContainer");
@@ -219,8 +282,11 @@ function generateCourseCards(data) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  generateSeminarCards(recBakingSeminarData);
+  generateSeminarCards(recBakingSeminarData, bakingPos, bakingInViewport);
   generateCourseCards(bakingCourseData);
+
+  rightNav.addEventListener("click", bakingCardsRight);
+  leftNav.addEventListener("click", bakingCardsLeft);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -233,21 +299,27 @@ document.addEventListener("DOMContentLoaded", function () {
     recBusinessContainer.style.display = "none";
     recBakingContainer.style.display = "flex";
 
-    generateSeminarCards(recBakingSeminarData);
+    generateSeminarCards(recBakingSeminarData, bakingPos, bakingInViewport);
     generateCourseCards(bakingCourseData);
 
     bakingOption.src = "./assets/baking-active.png";
     businessOption.src = "./assets/business-inactive.png";
+
+    rightNav.addEventListener("click", bakingCardsRight);
+    leftNav.addEventListener("click", bakingCardsLeft);
   });
 
   businessOption.addEventListener("click", function () {
     recBakingContainer.style.display = "none";
     recBusinessContainer.style.display = "flex";
 
-    generateSeminarCards(recBusinessSeminarData);
+    generateSeminarCards(recBusinessSeminarData, businessPos, businessInViewport);
     generateCourseCards(businessCourseData);
 
     bakingOption.src = "./assets/baking-inactive.png";
     businessOption.src = "./assets/business-active.png";
+
+    rightNav.addEventListener("click", businessCardsRight);
+    leftNav.addEventListener("click", businessCardsLeft);
   });
 });
