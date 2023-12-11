@@ -270,7 +270,7 @@ section > h1 {
 }
 
 .course-card > img {
-  width: 100px%;
+  width: 100px;
   height: 100px;
   margin: auto 20px;
 }
@@ -370,12 +370,6 @@ section > h1 {
     min-height: 400px;
   }
 
-  .seminar-card-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
 
   .card-detail {
     width: 100%;
@@ -393,14 +387,27 @@ section > h1 {
     font-size: 12px;
   }
 
+  .course-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .course-card > img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+  }
+
   .course-card-body {
+    flex-direction: column;
     width: 100%;
     min-height: fill-container;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    padding: 24px 0;
+    padding: 8px 0;
+    text-align: center;
   }
 
   .course-card-text {
