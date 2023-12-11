@@ -23,7 +23,7 @@
 
 .top-img {
   width: 62px;
-  height: 62px
+  height: 62px;
 }
 
 .top-row > h2 {
@@ -89,8 +89,8 @@
 }
 
 .topic-header > h3,
-.reply-header > h3  {
-  font-size: 16px
+.reply-header > h3 {
+  font-size: 16px;
 }
 
 .topic-content,
@@ -117,23 +117,30 @@
 }
 
 .action-container {
+  width: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 62px;
+  margin: 0 auto;
+}
+
+.topic-asset > img {
+  max-height: 100%;
+  width: 100%;
+  max-width: 400px;
 }
 
 .topic-action,
 .reply-action {
-  font-size: 12px;
   display: flex;
   align-items: center;
   gap: 12px;
+  width: fit-content;
 }
 
 .topic-action > img,
 .reply-action > img {
-  width: 20px
+  width: 20px;
 }
 
 .topic-input {
@@ -145,8 +152,8 @@
   background-color: #f6edd7;
 }
 
-.topic-input > p {
-  font-size: 14px;
+.topic-input p {
+  font-size: 12px;
 }
 
 .comment-input {
@@ -204,7 +211,8 @@
 
 /* Responsive Styles */
 @media only screen and (width <= 900px) {
-  .community-top {
+  .community-top,
+  .community-bottom {
     padding: 24px 42px;
   }
 
@@ -222,8 +230,9 @@
   }
 
   .topic-content,
-  .topic-reply-container {
-    padding: 24px 64px;
+  .topic-reply-container,
+  .short-topic-content {
+    padding: 24px 48px;
   }
 }
 
@@ -291,28 +300,31 @@
   }
 
   .action-container {
-    justify-content: flex-start;
     width: 100%;
-    gap: 52px;
+    justify-content: sapce-evenly;
   }
 
   .topic-action {
-    width: 24px;
-    height: 24px;
     align-items: center;
     gap: 4px;
   }
 
-  .topic-action > p {
-    font-size: 12px;
+  .topic-action img,
+  .reply-action img {
+    width: 14px;
   }
 
-  .reply-header{
+  .topic-action p,
+  .topic-ation p {
+    font-size: 8px;
+  }
+
+  .reply-header {
     gap: 8px;
   }
 
   .reply-header > h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .topic-reply-container,
@@ -324,7 +336,7 @@
     gap: 24px;
   }
 
-  .arrow-container > img{
+  .arrow-container > img {
     width: 12px;
     height: 12px;
   }
@@ -346,7 +358,12 @@
   }
 
   .arrow-container > p {
-    font-size: 12px
+    font-size: 12px;
+  }
+
+  .see-all {
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 
