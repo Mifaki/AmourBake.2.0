@@ -219,12 +219,12 @@ header {
   flex-basis: 65%;
 }
 
-.nav {
+.nav-menu {
   width: 100%;
   text-align: left;
   display: flex;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 12px;
   gap: 24px;
   color: #000000;
 }
@@ -273,13 +273,12 @@ header {
     z-index: 9999;
     background-color: #01323C;
     transition: all 0.4s ease-in-out;
-    gap: 32px;
   }
 
-  .nav {
+  .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 36px;
     font-size: 18px;
     font-weight: 500;
     color: #F6EDD7;

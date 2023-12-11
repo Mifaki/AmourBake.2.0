@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (email === userData.email && password === userData.password) {
           localStorage.setItem("isLoggedIn", "true");
           localStorage.setItem("name", userData.fullname);
-          window.location.href = "./index.html";
+          window.location.href = "index.html";
         } else {
           alert("Invalid email or password. Please try again.");
           document.getElementById("email").value = "";
