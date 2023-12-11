@@ -77,7 +77,7 @@
 }
 
 .method-container > h2 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .payment-body {
@@ -97,15 +97,15 @@
   background-color: rgba(204, 186, 159, 0.4);
   width: 100%;
   padding: 12px 32px;
-  font-size: 20px;
+  font-size: 16px;
   border: 1px solid #000;
 }
 
 input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   border: 1px solid #000;
   border-radius: 100%;
   background-color: transparent;
@@ -115,8 +115,8 @@ input[type="radio"] {
 input[type="radio"]:checked::before {
   content: "";
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   background-color: #000;
   border-radius: 100%;
   position: absolute;
@@ -129,7 +129,7 @@ input[type="radio"]:checked::before {
 .credit-body {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 16px;
   padding: 32px 82px;
   font-size: 18px;
 }
@@ -137,7 +137,12 @@ input[type="radio"]:checked::before {
 .form-text {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 8px;
+}
+
+.form-text > label,
+.form-date > label {
+  font-size: 16px;
 }
 
 .form-text > input[type="text"] {
@@ -157,7 +162,7 @@ input[type="radio"]:checked::before {
   flex: 0.6;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 8px;
 }
 
 .date-container {
@@ -177,12 +182,16 @@ select {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 48px;
+}
+
+.form-check > label {
+  font-size: 12px;
 }
 
 input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   border-radius: 4px;
   border: 1px solid #000;
 }
@@ -196,9 +205,119 @@ input[type="checkbox"]:checked {
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   background-color: #714f3b;
   box-shadow: 4px 4px 10px 0px #ac987a;
-  padding: 12px 0;
+  padding: 14px 0;
+}
+
+/* Responsive Styles */
+@media only screen and (width <= 1240px) {
+  .banner {
+    background-repeat: no-repeat;
+    object-fit: cover;
+    padding: 48px 24px;
+  }
+}
+
+@media only screen and (width <= 904px) {
+  .banner {
+    padding: 48px 32px;
+  }
+
+  .banner-text > div > h2 {
+    font-size: 18px;
+  }
+
+  .banner-text > div > h3 {
+    font-size: 16px;
+  }
+
+  .icon-text > p {
+    font-size: 14px;
+  }
+
+  .payment-top,
+  .method-container,
+  .credit-body {
+    padding: 32px 52px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .form-date {
+    flex: 1;
+    width: 100%;
+  }
+
+  .form-row > .form-text {
+    width: 100%;
+  }
+}
+
+@media only screen and (width <= 600px) {
+  .banner {
+    padding: 48px 16px;
+  }
+
+  .banner > img {
+    display: none;
+  }
+
+  .icon-text > p {
+    font-size: 12px;
+  }
+
+  .icon-text > img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .payment-top,
+  .credit-body {
+    padding: 24px 36px;
+  }
+
+  .method-container {
+    padding: 24px;
+  }
+
+  .payment-top > p,
+  .payment-top > div {
+    font-size: 14px;
+  }
+
+  .date-container {
+    gap: 32px;
+  }
+}
+
+@media only screen and (width <= 420px) {
+  .method-container {
+    padding: 24px 12px;
+  }
+
+  .form-text > label,
+  .form-date > label {
+    font-size: 14px;
+  }
+
+  .form-text > input[type="text"] {
+    font-size: 12px;
+  }
+
+  .date-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .date-container > select {
+    width: 100%;
+  }
 }

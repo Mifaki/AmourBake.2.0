@@ -165,6 +165,8 @@
 /* Responsive Styles */
 @media only screen and (width <= 1240px) {
   .banner {
+    background-repeat: no-repeat;
+    object-fit: cover;
     padding: 48px 24px;
   }
 }
@@ -211,6 +213,15 @@
 
   .banner > img {
     display: none
+  }
+
+  .icon-text > p {
+    font-size: 12px;
+  }
+
+  .icon-text > img {
+    width: 16px;
+    height: 16px;
   }
 
   .top-left > h2 {
